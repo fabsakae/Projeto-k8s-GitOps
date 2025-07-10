@@ -92,7 +92,8 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     ```bash
     minikube kubectl -- port-forward svc/argocd-server -n argocd 8081:443
     ```
-![8081](https://github.com/user-attachments/assets/23378f57-a3a3-452d-81b4-b842e35422b6)
+![8081](https://github.com/user-attachments/assets/450a6ab7-73f6-4368-8c8e-4cb0b015d55b)
+
 
 ### **3. Acessar e Logar no ArgoCD**
 
@@ -168,7 +169,8 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     ```
     * O comando ficará rodando no terminal.
     
-![8080](https://github.com/user-attachments/assets/1071e637-3a57-4483-bf50-1266d9ff4bed)
+![8080](https://github.com/user-attachments/assets/e4ac218b-551b-4644-9001-be70877a2c75)
+
 
 ![onlineconexao](https://github.com/user-attachments/assets/a6926f38-dc26-4fca-8498-7f0662ce6143)
 
