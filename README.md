@@ -56,9 +56,11 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     Criar um repositório no GitHub com:
         b. Apenas o arquivo release/kubernetes-manifests.yaml
         c. Estrutura recomendada:
+        ```
         gitops-microservices/
         └── k8s/
             └── online-boutique.yaml
+        ```
     **Repositório chamado: Projeto-k8s-GitOps. Dentro dele, existe uma pasta: k8s. Dentro da pasta k8s, existe um arquivo chamado: online-boutique.yaml.**
     **Clone o Repositório:**
     
