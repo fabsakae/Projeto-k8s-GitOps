@@ -87,8 +87,9 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
 3.  **Fazer Port-Forward para o ArgoCD Server ("encaminhar" uma porta do seu computador local (WSL) para a porta do serviço do ArgoCD no cluster.):**
     **Mantener este comando rodando em um terminal WSL separado:**
     ```bash
-    minikube kubectl -- port-forward svc/argocd-server -n argocd 8080:443
+    minikube kubectl -- port-forward svc/argocd-server -n argocd 8081:443
     ```
+![8081](https://github.com/user-attachments/assets/23378f57-a3a3-452d-81b4-b842e35422b6)
 
 ### **3. Acessar e Logar no ArgoCD**
 
@@ -99,7 +100,7 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     ```
     Anotei esta senha.
 2.  **Acesse o ArgoCD no Navegador:**
-    Abri meu navegador web e fui para: `https://localhost:8080`.
+    Abri meu navegador web e fui para: `https://localhost:8081`.
     (Ignore o aviso de segurança, se aparecer.)
     
 ![argo1](https://github.com/user-attachments/assets/593411e3-d1cc-4cae-b591-e3267caece00)
@@ -159,7 +160,9 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     minikube kubectl -- port-forward svc/frontend -n default 8080:80
     ```
     * O comando ficará rodando no terminal.
-    * 
+    
+![8080](https://github.com/user-attachments/assets/1071e637-3a57-4483-bf50-1266d9ff4bed)
+
 ![onlineconexao](https://github.com/user-attachments/assets/a6926f38-dc26-4fca-8498-7f0662ce6143)
 
 2.  **Acesse a Aplicação no Navegador:**
@@ -169,6 +172,10 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
 ![onlineboutique](https://github.com/user-attachments/assets/22e30ba1-77f9-469a-a2a8-4d54cc3128e9)
 
     A aplicação Online Boutique está carregada e funcional!
+
+* **Customização e Sincronização de Réplicas (loadgenerator):** Foi demonstrada a capacidade de customizar o manifest `online-boutique.yaml` no repositório Git, alterando o número de réplicas do microserviço `loadgenerator` para `2`. O ArgoCD detectou essa mudança e, através de uma sincronização (forçada via UI, se necessário), aplicou a alteração no cluster Kubernetes. Isso resultou na execução bem-sucedida de **duas réplicas** do `loadgenerator`, confirmadas através dos comandos `kubectl`.
+
+![costumize](https://github.com/user-attachments/assets/faf48c0b-f739-417c-8f1d-1f275d9215b0)
 
 ---
 
