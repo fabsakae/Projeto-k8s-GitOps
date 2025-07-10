@@ -108,7 +108,7 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
 4.  **Faça Login:**
     * **Username:** `admin`
     * **Password:** Usei a senha que obiteve no passo anterior.
-    * 
+
 ![argo2](https://github.com/user-attachments/assets/de5566e7-402c-4e39-97eb-bc0e2998cf6a)
 
 ### **4. Configurar Repositório e Criar Aplicação no ArgoCD**
@@ -152,6 +152,9 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
 ![argosincro](https://github.com/user-attachments/assets/5a01374d-b1e6-4bf1-ae42-f741c6dee51d)
 ![argosincro2](https://github.com/user-attachments/assets/cf80a8cd-01af-4774-8791-9dfc01eaeb7c)
 
+![sincro2](https://github.com/user-attachments/assets/373ce175-0fe7-4405-94e9-939091328d23)
+
+
 ### **5. Acessar o Frontend da Aplicação Online Boutique**
 
 1.  **Faça Port-Forward para o Serviço Frontend:**
@@ -173,7 +176,7 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
 
     A aplicação Online Boutique está carregada e funcional!
 
-* **Customização e Sincronização de Réplicas (loadgenerator):** Foi demonstrada a capacidade de customizar o manifest `online-boutique.yaml` no repositório Git, alterando o número de réplicas do microserviço `loadgenerator` para `2`. O ArgoCD detectou essa mudança e, através de uma sincronização (forçada via UI, se necessário), aplicou a alteração no cluster Kubernetes. Isso resultou na execução bem-sucedida de **duas réplicas** do `loadgenerator`, confirmadas através dos comandos `kubectl`.
+* **Customização e Sincronização de Réplicas (loadgenerator):** Foi demonstrada a capacidade de customizar o manifest `online-boutique.yaml` no repositório Git, alterando o número de réplicas do microserviço `loadgenerator` para `2`. O ArgoCD detectou essa mudança e, através de uma sincronização, aplicou a alteração no cluster Kubernetes. Isso resultou na execução bem-sucedida de **duas réplicas** do `loadgenerator`, confirmadas através dos comandos `kubectl`.
 
 ![costumize](https://github.com/user-attachments/assets/faf48c0b-f739-417c-8f1d-1f275d9215b0)
 
