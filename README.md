@@ -58,7 +58,8 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     Fork do repositório oficial:
         a. https://github.com/GoogleCloudPlatform/microservices-demo
         
-![fork](https://github.com/user-attachments/assets/c7860645-4732-4b5f-b2fd-0d0d2c495061)
+![fork2](https://github.com/user-attachments/assets/ba03e009-9a73-456e-abf2-e7ac3f6e02c0)
+
 
     Criar um repositório no GitHub com:
         b. Apenas o arquivo release/kubernetes-manifests.yaml
