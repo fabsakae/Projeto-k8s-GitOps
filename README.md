@@ -42,16 +42,18 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     minikube start
     ```
     (Este comando também configurará o `kubectl` para usar o contexto do Minikube).
+![minikube-start](https://github.com/user-attachments/assets/b53d2aa4-17f3-4aa3-af22-d7905eac3fac)
 
     **Clone o Repositório:**
     Abra seu terminal WSL e clone este repositório:
     ```bash
     git clone https://github.com/fabsakae/Projeto-k8s-GitOps.git
     ```
-    
+![gitclone](https://github.com/user-attachments/assets/22581c17-a501-4ccf-be95-94c88d075eac)
 2.  **Etapa 1 – Fork e repositório GitHub:**
     Fork do repositório oficial:
         a. https://github.com/GoogleCloudPlatform/microservices-demo
+![fork](https://github.com/user-attachments/assets/c7860645-4732-4b5f-b2fd-0d0d2c495061)
 
     Criar um repositório no GitHub com:
         b. Apenas o arquivo release/kubernetes-manifests.yaml
@@ -62,8 +64,7 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
             └── online-boutique.yaml
         ```
     **Repositório chamado: Projeto-k8s-GitOps. Dentro dele, existe uma pasta: k8s. Dentro da pasta k8s, existe um arquivo chamado: online-boutique.yaml.**
-    **Clone o Repositório:**
-    
+      
     
 
 ### **2. Deploy do ArgoCD**
@@ -72,10 +73,14 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     ```bash
     minikube kubectl -- create namespace argocd
     ```
+![namespace](https://github.com/user-attachments/assets/8862a091-55cd-4b21-b49e-e48cf07e5f1b)
+
 2.  **Aplique o Manifesto de Instalação do ArgoCD (Instrui o Kubernetes a aplicar todos os manifestos (arquivos YAML) definidos no link fornecido):**
     ```bash
     minikube kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
     ```
+![apply](https://github.com/user-attachments/assets/ea1f8f81-fcf3-48a2-9091-0295d75daa7e)
+
 3.  **Fazer Port-Forward para o ArgoCD Server ("encaminhar" uma porta do seu computador local (WSL) para a porta do serviço do ArgoCD no cluster.):**
     **Mantener este comando rodando em um terminal WSL separado:**
     ```bash
@@ -93,7 +98,8 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
 2.  **Acesse o ArgoCD no Navegador:**
     Abri meu navegador web e fui para: `https://localhost:8080`.
     (Ignore o aviso de segurança, se aparecer.)
-3.  **Faça Login:**
+![argo1](https://github.com/user-attachments/assets/593411e3-d1cc-4cae-b591-e3267caece00)
+4.  **Faça Login:**
     * **Username:** `admin`
     * **Password:** Usei a senha que obiteve no passo anterior.
 
