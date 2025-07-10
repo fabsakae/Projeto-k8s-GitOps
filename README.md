@@ -13,20 +13,21 @@ As seguintes entregas foram realizadas com sucesso neste projeto:
 * ✅ **Criação do App no ArgoCD:** Configuração da aplicação no ArgoCD, apontando para o repositório Git.
 * ✅ **Sincronização da Aplicação:** Sincronização bem-sucedida da aplicação, garantindo que todos os pods estejam rodando e saudáveis.
 * ✅ **Acesso ao Frontend:** Acesso ao frontend da aplicação Online Boutique via `kubectl port-forward`.
+* ✅ ** (Opcional) Customizar o manifest** (ex: mudar número de réplicas de algum microserviço)
 
 ---
 
 ## ⚙️ Pré-requisitos
 
-Para replicar este projeto, você precisará ter os seguintes softwares instalados e configurados em seu ambiente:
+Para replicar este projeto, os seguintes softwares instalados e configurados no ambiente:
 
 * **Git:** Ferramenta de controle de versão.
-* **Docker Desktop com WSL2:** Ambiente de contêineres Docker com o subsistema Linux para Windows.
+* **Docker está configurado para ser acessado via um socket Unix dentro do seu ambiente WSL, com WSL2:**
 * **Minikube:** Ferramenta para rodar um cluster Kubernetes localmente.
-* **`kubectl`:** Ferramenta de linha de comando para interagir com clusters Kubernetes. (Geralmente vem com o Minikube ou Docker Desktop).
+* **`kubectl`:** Ferramenta de linha de comando para interagir com clusters Kubernetes.
 * **Conta GitHub:** Para hospedar o repositório do projeto.
 * **Personal Access Token (PAT) do GitHub:** Com permissões de `repo` para o ArgoCD acessar o repositório.
-* **Visual Studio Code (VS Code):** Editor de código (opcional, mas recomendado para o WSL).
+* **Visual Studio Code (VS Code):** Editor de código (usei também via terminal powershell preview).
 
 ---
 
