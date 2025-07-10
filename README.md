@@ -42,6 +42,7 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     minikube start
     ```
     (Este comando também configurará o `kubectl` para usar o contexto do Minikube).
+    
 ![minikube-start](https://github.com/user-attachments/assets/b53d2aa4-17f3-4aa3-af22-d7905eac3fac)
 
     **Clone o Repositório:**
@@ -50,9 +51,11 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     git clone https://github.com/fabsakae/Projeto-k8s-GitOps.git
     ```
 ![gitclone](https://github.com/user-attachments/assets/22581c17-a501-4ccf-be95-94c88d075eac)
+
 2.  **Etapa 1 – Fork e repositório GitHub:**
     Fork do repositório oficial:
         a. https://github.com/GoogleCloudPlatform/microservices-demo
+        
 ![fork](https://github.com/user-attachments/assets/c7860645-4732-4b5f-b2fd-0d0d2c495061)
 
     Criar um repositório no GitHub com:
@@ -98,10 +101,14 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
 2.  **Acesse o ArgoCD no Navegador:**
     Abri meu navegador web e fui para: `https://localhost:8080`.
     (Ignore o aviso de segurança, se aparecer.)
+    
 ![argo1](https://github.com/user-attachments/assets/593411e3-d1cc-4cae-b591-e3267caece00)
+
 4.  **Faça Login:**
     * **Username:** `admin`
     * **Password:** Usei a senha que obiteve no passo anterior.
+    * 
+![argo2](https://github.com/user-attachments/assets/de5566e7-402c-4e39-97eb-bc0e2998cf6a)
 
 ### **4. Configurar Repositório e Criar Aplicação no ArgoCD**
 
@@ -114,6 +121,9 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
         * `Username (optional)`: `fabsakae` (seu usuário do GitHub)
         * `Password (optional)`: Cole seu **Personal Access Token (PAT)** do GitHub aqui.
     * Rolei para cima e clique em `CONNECT`. (Confirmei que o status aparece como `Successful`).
+    * 
+![argoaplicacao](https://github.com/user-attachments/assets/44bd802d-3c79-43da-a3e0-a3b95f028489)
+
 2.  **Crie a Nova Aplicação:**
     * Naveguei para `Applications` (Aplicações).
     * Cliquei em `+ NEW APP` (Novo Aplicativo).
@@ -130,11 +140,16 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
             * `Cluster Name`: `in-cluster`
             * `Namespace`: `default`
     * Cliquei em `CREATE` no canto superior esquerdo da tela.
+![argorepo](https://github.com/user-attachments/assets/80a380af-fcbe-4ee2-b148-72dd655fc46d)
+
 3.  **Sincronize a Aplicação:**
     * No dashboard de `Applications`, cliquei na nova aplicação `online-boutique`.
     * No canto superior esquerdo da tela de detalhes, cliquei em `SYNC`.
     * Na janela de confirmação que aparece, cliquei em `SYNCHRONIZE`.
-    * Aguardei o ArgoCD implantar os recursos. (O status da aplicação deve mudar de `Missing` para `Progressing` e, finalmente, para `Healthy` e `Synced`. Issoleva alguns minutos.)
+    * Aguardei o ArgoCD implantar os recursos. (O status da aplicação deve mudar de `Missing` para `Progressing` e, finalmente, para `Healthy` e `Synced`. Isso leva alguns minutos.)
+
+![argosincro](https://github.com/user-attachments/assets/5a01374d-b1e6-4bf1-ae42-f741c6dee51d)
+![argosincro2](https://github.com/user-attachments/assets/cf80a8cd-01af-4774-8791-9dfc01eaeb7c)
 
 ### **5. Acessar o Frontend da Aplicação Online Boutique**
 
@@ -144,9 +159,14 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     minikube kubectl -- port-forward svc/frontend -n default 8080:80
     ```
     * O comando ficará rodando no terminal.
+    * 
+![onlineconexao](https://github.com/user-attachments/assets/a6926f38-dc26-4fca-8498-7f0662ce6143)
+
 2.  **Acesse a Aplicação no Navegador:**
     Com o `port-forward` rodando, abri o navegador web e acessei:
     `http://localhost:8080` .
+    
+![onlineboutique](https://github.com/user-attachments/assets/22e30ba1-77f9-469a-a2a8-4d54cc3128e9)
 
     A aplicação Online Boutique está carregada e funcional!
 
