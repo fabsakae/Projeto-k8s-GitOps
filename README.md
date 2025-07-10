@@ -44,7 +44,8 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     ```
     (Este comando também configurará o `kubectl` para usar o contexto do Minikube).
     
-![minikube-start](https://github.com/user-attachments/assets/b53d2aa4-17f3-4aa3-af22-d7905eac3fac)
+![mini](https://github.com/user-attachments/assets/1c66daa8-cb5b-4448-ba83-25f41bb57483)
+
 
     **Clone o Repositório:**
     Abra seu terminal WSL e clone este repositório:
