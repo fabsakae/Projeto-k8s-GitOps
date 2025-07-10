@@ -123,7 +123,7 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
         * `Username (optional)`: `fabsakae` (seu usuário do GitHub)
         * `Password (optional)`: Cole seu **Personal Access Token (PAT)** do GitHub aqui.
     * Rolei para cima e clique em `CONNECT`. (Confirmei que o status aparece como `Successful`).
-    * 
+
 ![argoaplicacao](https://github.com/user-attachments/assets/44bd802d-3c79-43da-a3e0-a3b95f028489)
 
 2.  **Crie a Nova Aplicação:**
@@ -142,6 +142,7 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
             * `Cluster Name`: `in-cluster`
             * `Namespace`: `default`
     * Cliquei em `CREATE` no canto superior esquerdo da tela.
+
 ![argorepo](https://github.com/user-attachments/assets/80a380af-fcbe-4ee2-b148-72dd655fc46d)
 
 3.  **Sincronize a Aplicação:**
@@ -178,6 +179,8 @@ Passos para configurar e implantar a aplicação Online Boutique usando GitOps.
     A aplicação Online Boutique está carregada e funcional!
 
 * **Customização e Sincronização de Réplicas (loadgenerator):** Foi demonstrada a capacidade de customizar o manifest `online-boutique.yaml` no repositório Git, alterando o número de réplicas do microserviço `loadgenerator` para `2`. O ArgoCD detectou essa mudança e, através de uma sincronização, aplicou a alteração no cluster Kubernetes. Isso resultou na execução bem-sucedida de **duas réplicas** do `loadgenerator`, confirmadas através dos comandos `kubectl`.
+  
+![replica2](https://github.com/user-attachments/assets/137a6409-c9ee-4375-830f-e64572785309)
 
 ![costumize](https://github.com/user-attachments/assets/faf48c0b-f739-417c-8f1d-1f275d9215b0)
 
